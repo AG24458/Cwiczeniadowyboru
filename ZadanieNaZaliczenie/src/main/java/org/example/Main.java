@@ -1,5 +1,6 @@
 package org.example;
 
+import org.apache.log4j.BasicConfigurator;
 import org.example.Package1.Uzytkownik;
 import org.example.Package2.Koszyk;
 import org.example.Package2.Zamowienie;
@@ -8,6 +9,9 @@ import org.example.Package2.Zamowienie;
 // then press Enter. You can now see whitespace characters in your code.
 public class Main {
     public static void main(String[] args) {
+
+        BasicConfigurator.configure();
+
         Uzytkownik user = new Uzytkownik("user1");
         Koszyk koszyk = new Koszyk(user);
 

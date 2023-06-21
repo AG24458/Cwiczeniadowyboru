@@ -19,6 +19,11 @@ public class Koszyk {
 
     }
 
+    /**
+     * dodaje nowy  produkt do koszyka
+     *
+     * @param  name nazwa przedmiotu
+     */
     public void dodajPrzedmiot(String name){
 
         products.add(new Produkt(name));
@@ -26,6 +31,12 @@ public class Koszyk {
 
     }
 
+
+    /**
+     * tworzy zamowienie z produktow w koszyku a nastepnie usuwa je z koszyka
+     *
+     * @return  Zamowienie
+     */
     public Zamowienie zamow(){
         ArrayList<Produkt> produkty = new ArrayList<>(products);
         products.clear();
